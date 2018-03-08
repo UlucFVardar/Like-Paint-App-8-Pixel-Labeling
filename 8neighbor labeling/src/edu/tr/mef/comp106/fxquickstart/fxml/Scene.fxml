@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<VBox fx:id="MainPane" alignment="CENTER" prefHeight="686.0" prefWidth="1252.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.tr.mef.comp106.fxquickstart.MainPaneController">
+    <children>
+        <BorderPane prefHeight="702.0" prefWidth="1466.0">
+            <top>
+                <VBox BorderPane.alignment="CENTER">
+                    <children>
+                        <MenuBar>
+                            <menus>
+                                <Menu mnemonicParsing="false" text="File">
+                                    <items>
+                                        <MenuItem fx:id="miAddImage" mnemonicParsing="false" text="Add Image" />
+                                        <SeparatorMenuItem mnemonicParsing="false" />
+                                        <MenuItem fx:id="miSave" mnemonicParsing="false" text="Save" />
+                                    </items>
+                                </Menu>
+                                <Menu mnemonicParsing="false" text="Edit">
+                                    <items>
+                                        <MenuItem fx:id="deleteAll" mnemonicParsing="false" text="Delete All" />
+                                        <MenuItem fx:id="CleanPage" mnemonicParsing="false" text="Clean Page" />
+                                        <SeparatorMenuItem mnemonicParsing="false" />
+                                        <MenuItem fx:id="newPaper" mnemonicParsing="false" text="New Drawing Paper" />
+                                    </items>
+                                </Menu>
+                                <Menu fx:id="idabout" mnemonicParsing="false" text="About">
+                                    <items>
+                                        <MenuItem fx:id="information" mnemonicParsing="false" text="Information">
+                                            <graphic>
+                                                <Pane focusTraversable="true" prefWidth="400.0">
+                                                    <children>
+                                                        <Label focusTraversable="false" layoutX="5.0" layoutY="10.0" text="This program was writen by  " wrapText="true" />
+                                                        <Label focusTraversable="false" layoutX="5.0" layoutY="30.0" text="Uluç Furkan Vardar " />
+                                                        <Label focusTraversable="false" layoutX="5.0" layoutY="50.0" text="If there is a problem please let me know ;" />
+                                          <Hyperlink fx:id="idHyper" layoutX="5.0" layoutY="70.0" text="vardaru@mef.edu.tr" />
+                                                    </children>
+                                                    <cursor>
+                                                        <Cursor fx:constant="DEFAULT" />
+                                                    </cursor>
+                                                </Pane>
+                                            </graphic>
+                                        </MenuItem>
+                                    </items>
+                                </Menu>
+                            </menus>
+                            <cursor>
+                                <Cursor fx:constant="DEFAULT" />
+                            </cursor>
+                        </MenuBar>
+                    </children>
+                </VBox>
+            </top>
+            <bottom>
+                <ImageView fx:id="ivPalette" fitHeight="437.0" fitWidth="767.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                    <image>
+                        <Image url="@../palet2.jpg" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="CROSSHAIR" />
+                    </cursor>
+                </ImageView>
+            </bottom>
+            <left>
+                <Slider fx:id="setThicknees" layoutX="40.0" max="200.0" orientation="VERTICAL" prefHeight="625.0" prefWidth="40.0" visible="false" BorderPane.alignment="CENTER">
+                    <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                    </cursor>
+                </Slider>
+            </left>
+            <right>
+                <TitledPane fx:id="selectionMenu" minWidth="-Infinity" prefHeight="625.0" prefWidth="104.0" text="selections" textAlignment="RIGHT" visible="false" wrapText="true" BorderPane.alignment="CENTER_RIGHT">
+                    <content>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fx:id="drawregt" fitHeight="104.0" fitWidth="108.0" layoutX="-1.0" layoutY="459.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../paint-brush-250x250.jpg" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="eraser" fitHeight="74.0" fitWidth="105.0" layoutX="-1.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../blackboards_chalkboards_188927_tnb.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="sprey" fitHeight="111.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../paintspreyiamge.jpg" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                    </content>
+                    <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                    </cursor>
+                </TitledPane>
+            </right>
+            <center>
+                <ImageView fx:id="ivMain" fitHeight="269.0" fitWidth="293.0" preserveRatio="true" BorderPane.alignment="CENTER">
+                    <image>
+                        <Image backgroundLoading="true" url="file:src/edu/tr/mef/comp106/fxquickstart/images/logo_tr_color.png" />
+                    </image>
+                </ImageView>
+            </center>
+        </BorderPane>
+        
+            
+    
+    </children>
+</VBox>
